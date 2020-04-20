@@ -1,0 +1,19 @@
+; hostname line is optional.
+hostname = api.m.jd.com, act.10010.com, tieba.baidu.com, m.pearkin.com
+# Get JingDong cookie. QX 1.0.5(188+):
+https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+
+#Display jd historical price
+^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/jd_price.js
+
+#pear
+^https:\/\/m\.pearkin\.com\/(api\/Movie\/WatchMovie|api\/Account\/CheckVip|api\/account\/IndexDetail) url script-response-body https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Script/pear.js
+
+#联通签到 get cookie 1-2
+#^https:\/\/act.10010.com\/SigninApp\/signin\/querySigninActivity.htm url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+
+#联通签到 get cookie 2-2
+#^https:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign.do url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
+
+#贴吧get cookie
+#^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
