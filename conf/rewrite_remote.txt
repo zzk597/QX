@@ -1,5 +1,5 @@
 ; hostname line is optional.
-hostname = api.m.jd.com, act.10010.com, tieba.baidu.com, m.pearkin.com
+hostname = api.m.jd.com, act.10010.com, tieba.baidu.com, m.pearkin.com, education.github.com
 # Get JingDong cookie. QX 1.0.5(188+):
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageIndex) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
@@ -17,3 +17,6 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageI
 
 #贴吧get cookie
 #^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
+
+#WorkingCopy UnlockPro
+#^https:\/\/education\.github\.com\/api\/user$ url script-response-body https://raw.githubusercontent.com/zzk597/QX/master/Scripts/WorkingCopy.js
