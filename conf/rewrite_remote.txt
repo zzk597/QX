@@ -16,7 +16,7 @@ https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean(Index|GroupStageI
 ^https:\/\/act.10010.com\/SigninApp(.*?)\/signin\/daySign.do url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/10010/10010.cookie.js
 
 #贴吧get cookie
-#^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
+^https?:\/\/tieba\.baidu\.com\/?.? url script-request-header https://raw.githubusercontent.com/chavyleung/scripts/master/tieba/tieba.cookie.js
 
 #WorkingCopy UnlockPro
 ^https:\/\/education\.github\.com\/api\/user$ url script-response-body https://raw.githubusercontent.com/zzk597/QX/master/Scripts/WorkingCopy.js
